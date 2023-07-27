@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main id="main" class="main">
+      <header class="main__header">
+        <img src="images/logo.svg" class="main__logo" alt="Logo" />
+        <div class="main__userScore">
+          <h3>Your Score</h3>
+          <span class="main__userScore" id="user-score"></span>
+        </div>
+        <div class="main__computerScore">
+          <h3>Computer Score</h3>
+          <span class="main__computerScore" id="computer-score"></span>
+        </div>
+      </header>
+
+      <section class="main__step1 animate__animated animate__fadeIn" id="step1">
+        <img
+          src="images/bg-triangle.svg"
+          class="main__bgTriangle"
+          alt="Bg Triangle"
+        />
+        <div class="main__iconPaper" id="paper">
+          <img src="images/icon-paper.svg" alt="Icon Paper" />
+        </div>
+        <div class="main__iconScissors" id="scissors">
+          <img src="images/icon-scissors.svg" alt="Icon Scissors" />
+        </div>
+        <div class="main__iconRock" id="rock">
+          <img src="images/icon-rock.svg" alt="Icon Rock" />
+        </div>
+      </section>
+
+      <section
+        class="main__step1Advanced animate__animated animate__fadeIn"
+        id="step1-advanced"
+      >
+        <img
+          src="images/bg-pentagon.svg"
+          class="main__bgPentagon"
+          alt="Bg Pentagon"
+        />
+
+        <div class="main__iconScissors" id="scissors-advanced">
+          <img src="images/icon-scissors.svg" alt="Icon Scissors" />
+        </div>
+        <div class="main__iconPaper" id="paper-advanced">
+          <img src="images/icon-paper.svg" alt="Icon Paper" />
+        </div>
+        <div class="main__iconRock" id="rock-advanced">
+          <img src="images/icon-rock.svg" alt="Icon Rock" />
+        </div>
+        <div class="main__iconLizard" id="lizard">
+          <img src="images/icon-lizard.svg" alt="Icon Lizard" />
+        </div>
+        <div class="main__iconSpock" id="spock">
+          <img src="images/icon-spock.svg" alt="Icon Spock" />
+        </div>
+      </section>
+
+      <section class="main__step2" id="step2">
+        <div>
+          <h3>You Picked</h3>
+          <div class="main__icon" id="user-pick">
+            <img src="" alt="Icon" />
+          </div>
+        </div>
+
+        <div class="main__result" id="result">
+          <h3>You Lose</h3>
+          <button id="pick-again">
+            <i class="fa-solid fa-arrow-left-long"></i>
+            Pick Again
+          </button>
+        </div>
+
+        <div>
+          <h3>The House Picked</h3>
+          <div class="main__icon" id="computer-pick">
+            <img src="" alt="Icon" />
+          </div>
+        </div>
+      </section>
+
+      <section class="main__step2Advanced" id="step2-advanced">
+        <div>
+          <h3>You Picked</h3>
+          <div class="main__icon" id="userPick-advanced">
+            <img src="" alt="Icon" />
+          </div>
+        </div>
+
+        <div class="main__result" id="result-advanced">
+          <h3>You Lose</h3>
+          <button id="pickAgain-advanced">
+            <i class="fa-solid fa-arrow-left-long"></i>
+            Pick Again
+          </button>
+        </div>
+
+        <div>
+          <h3>The House Picked</h3>
+          <div class="main__icon" id="computerPick-advanced">
+            <img src="" alt="Icon" />
+          </div>
+        </div>
+      </section>
+
+      <section class="main__finalResult" id="final">
+        <h1></h1>
+        <button id="play-again">Play Again</button>
+      </section>
+    </main>
+    <button id="rules">Rules</button>
+    <div id="overlay"></div>
+    <div id="rules-modal">
+      <div>
+        <h3>Rules</h3>
+        <img src="images/icon-close.svg" id="close-modal" alt="Icon Close" />
+      </div>
+
+      <img
+        src="images/image-rules.svg"
+        class="rules-image"
+        id="rules-image"
+        alt="Image Rules"
+      />
+
+      <span>First who collects 5 points wins the game!</span>
+    </div>
+    <button id="advanced-mode">Advanced Mode</button>
+    <script src="js/basicMode.js"></script>
+    <script src="js/advancedMode.js"></script>
+  </body>
+</html>

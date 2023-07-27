@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+@import "./reset";
+@import "./variables";
+
+@import "./header";
+@import "./step1";
+@import "./step2";
+@import "./final";
+
+@import "./step1Advanced";
+@import "./step2Advanced";
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  height: 100vh;
+  background: radial-gradient(
+      circle at top,
+      hsl(214, 47%, 23%),
+      hsl(237, 49%, 15%)
+    )
+    no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @media screen and (max-height: 43.75rem) {
+    height: 100%;
+  }
+}
+
+#main {
+  width: 43.75rem;
+  height: 43.75rem;
+  position: relative;
+}
+
+#rules {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  border: 0.125rem solid #fff;
+  padding: 0.625rem 1.875rem;
+  border-radius: 0.4688rem;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.1563rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 2.5%;
+  right: 2.5%;
+  transition: 0.25s ease-in-out;
+
+  &:hover {
+    background: #fff;
+    color: $Dark-Text;
+  }
+
+  @media screen and (max-width: 62rem) {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 48rem) {
+    font-size: 0.875rem;
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: 90%;
+    font-size: 0.75rem;
+    right: unset;
+    left: 50%;
+    bottom: 1.75%;
+    transform: translateX(-50%);
+  }
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+
+  -webkit-animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+  display: none;
+}
+
+#rules-modal {
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.875rem 2.5rem;
+  border-radius: 0.625rem;
+  z-index: 10;
+
+  -webkit-animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  display: none;
+
+  @media screen and (max-width: 25rem) {
+    padding: 0.9375rem 1.25rem;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+
+    h3 {
+      text-transform: uppercase;
+      color: $Dark-Text;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .rules-image {
+    @media screen and (max-width: 28.125rem) {
+      width: 17.1875rem;
+    }
+  }
+
+  span {
+    color: hsl(349, 71%, 52%);
+    display: block;
+    margin-top: 1.25rem;
+    font-weight: 700;
+
+    @media screen and (max-width: 25rem) {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#advanced-mode {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  border: 0.125rem solid #fff;
+  padding: 0.625rem 1.875rem;
+  border-radius: 0.4688rem;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.1563rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 2.5%;
+  left: 2.5%;
+  transition: 0.25s ease-in-out;
+
+  &:hover {
+    background: #fff;
+    color: $Dark-Text;
+  }
+
+  @media screen and (max-width: 62.375rem) {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 48rem) {
+    font-size: 0.875rem;
+  }
+
+  @media screen and (max-width: 36rem) {
+    width: 90%;
+    font-size: 0.75rem;
+    left: unset;
+    left: 50%;
+    bottom: 7.5%;
+    transform: translateX(-50%);
+  }
+}

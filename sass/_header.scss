@@ -1,0 +1,98 @@
+.main__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.3125rem solid $Header-Outline;
+  padding: 1.875rem;
+  border-radius: 1.25rem;
+
+  @media screen and (max-width: 43.75rem) {
+    width: 90%;
+    margin: auto;
+    padding: 0.9375rem;
+  }
+
+  .main__logo {
+    @media screen and (max-width: 36rem) {
+      width: 6.25rem;
+    }
+
+    @media screen and (max-width: 25rem) {
+      width: 4.6875rem;
+    }
+  }
+
+  div {
+    background: #fff;
+    width: 9.375rem;
+    height: 7.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4688rem;
+
+    @media screen and (max-width: 43.75rem) {
+      width: 7.5rem;
+    }
+
+    @media screen and (max-width: 36rem) {
+      width: 6.25rem;
+      height: 6.25rem;
+    }
+
+    @media screen and (max-width: 25rem) {
+      width: 4.6875rem;
+      height: 4.6875rem;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      color: $Score-Text;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: -0.625rem;
+
+      @media screen and (max-width: 43.75rem) {
+        font-size: 0.875rem;
+        margin-bottom: 0;
+      }
+
+      @media screen and (max-width: 36rem) {
+        font-size: 0.75rem;
+      }
+
+      @media screen and (max-width: 25rem) {
+        font-size: 0.5rem;
+      }
+    }
+
+    span {
+      font-size: 4.5rem;
+      color: $Dark-Text;
+
+      @media screen and (max-width: 43.75rem) {
+        font-size: 3rem;
+      }
+
+      @media screen and (max-width: 36rem) {
+        font-size: 2.5rem;
+      }
+
+      &.main__userScore {
+        color: $Score-Text;
+      }
+
+      &.main__computerScore {
+        color: hsl(349, 71%, 52%);
+      }
+    }
+
+    &:nth-of-type(2) {
+      h3 {
+        color: hsl(349, 71%, 52%);
+      }
+    }
+  }
+}

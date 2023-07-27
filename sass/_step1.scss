@@ -1,0 +1,122 @@
+.main__step1 {
+  text-align: center;
+  position: relative;
+  height: 29.0625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.125rem;
+
+  @media screen and (max-width: 43.75rem) {
+    width: 31.25rem;
+    margin: 3.125rem auto 0;
+  }
+
+  @media screen and (max-width: 31.25rem) {
+    width: 23.4375rem;
+  }
+
+  @media screen and (max-width: 23.4375rem) {
+    width: 18.75rem;
+  }
+
+  div {
+    position: absolute;
+    width: 12.5rem;
+    height: 12.5rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    border: 1.5625rem solid;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+
+    @media screen and (max-width: 43.75rem) {
+      width: 10.9375rem;
+      height: 10.9375rem;
+    }
+
+    @media screen and (max-width: 31.25rem) {
+      width: 9.375rem;
+      height: 9.375rem;
+    }
+
+    @media screen and (max-width: 31.25rem) {
+      width: 8.4375rem;
+      height: 8.4375rem;
+    }
+
+    img {
+      width: 50%;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &.main__iconPaper {
+      border-color: hsl(230, 89%, 62%);
+      box-shadow: inset 0rem 0.4375rem 0rem 0rem #cbc8c8,
+        0rem 0.4375rem 0rem 0rem blue;
+
+      top: 2.5%;
+      left: 15%;
+
+      @media screen and (max-width: 43.75rem) {
+        left: 10%;
+      }
+
+      @media screen and (max-width: 31.25rem) {
+        top: 7.5%;
+        left: 2.5%;
+      }
+
+      @media screen and (max-width: 23.4375rem) {
+        top: 7.5%;
+        left: -2.5%;
+      }
+    }
+
+    &.main__iconScissors {
+      border-color: hsl(40, 84%, 53%);
+      box-shadow: inset 0rem 0.4375rem 0rem 0rem #cbc8c8,
+        0rem 0.4375rem 0rem 0rem #ba9004;
+
+      top: 2.5%;
+      right: 15%;
+
+      @media screen and (max-width: 43.75rem) {
+        right: 10%;
+      }
+
+      @media screen and (max-width: 31.25rem) {
+        top: 7.5%;
+        right: 2.5%;
+      }
+
+      @media screen and (max-width: 23.4375rem) {
+        top: 7.5%;
+        right: -2.5%;
+      }
+    }
+
+    &.main__iconRock {
+      border-color: hsl(349, 70%, 56%);
+      box-shadow: inset 0rem 0.4375rem 0rem 0rem #cbc8c8,
+        0rem 0.4375rem 0rem 0rem #990825;
+
+      bottom: 5%;
+
+      @media screen and (max-width: 43.75rem) {
+        bottom: 12.5%;
+      }
+
+      @media screen and (max-width: 31.25rem) {
+        bottom: 20%;
+      }
+    }
+  }
+}
